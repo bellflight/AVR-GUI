@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Cache Python Packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.config/pypoetry
@@ -34,7 +34,7 @@ jobs:
           pipx install vscode-task-runner
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version-file: .python-version
           cache: poetry
@@ -45,7 +45,7 @@ jobs:
 
       - name: Cache PyInstaller
         id: cache-pynstaller
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: build
           key: pyinstaller-cache-${{ hashFiles('poetry.lock', 'app/**') }}
@@ -61,7 +61,7 @@ jobs:
 
       - name: Upload GUI Artifact
         if: github.event_name != 'push'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: GUI
           path: dist/*.exe
