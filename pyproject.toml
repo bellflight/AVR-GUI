@@ -9,23 +9,23 @@
 
 [tool.poetry.dependencies]
     python = ">=3.9,<3.13"
-    numpy = "1.26.2"
-    scipy = "1.11.4"
+    numpy = "1.26.4"
+    scipy = "1.12.0"
     colour = "0.1.5"
     loguru = "0.7.2"
     pyside6-essentials = ">=6.6.0,<7.0.0"
     paho-mqtt = "^1.6.1"
     bell-avr-libraries = { extras = ["serial", "qt"], version = "0.2.0a7" }
-    pyinstaller = "6.2.0"
+    pyinstaller = "6.3.0"
     typeguard = "4.1.5"
     # needed for pydantic 2
     # https://github.com/pyinstaller/pyinstaller-hooks-contrib/blob/master/CHANGELOG.rst#20235-2023-07-05
     pyinstaller-hooks-contrib = ">=2023.5"
 
 [tool.poetry.group.dev.dependencies]
-    pre-commit = "3.5.0"
+    pre-commit = "3.6.2"
     pytest-cov = "4.1.0"
-    pytest     = "7.4.3"
+    pytest     = "8.0.2"
 
 [tool.pyright]
     typeCheckingMode           = "basic"
